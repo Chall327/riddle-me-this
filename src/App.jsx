@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
+import {useAuthentication} from "../authService";
+import Header from "./Header.jsx"
 import './index.css';
 
 function RiddleApp() {
   const [riddleAnswer, setRiddleAnswer] = useState(null);
   const [showAnswer, setShowAnswer] = useState(false);
+  const user = useAuthentication();
 
   const fetchRiddle = async () => {
     setShowAnswer(false);
@@ -16,6 +19,10 @@ function RiddleApp() {
     }
   };
 
+  function startOver() {
+
+  }
+
   useEffect(() => {
     fetchRiddle();
   }, []);
@@ -26,9 +33,7 @@ function RiddleApp() {
 
   return (
     <>
-      <header>
-        <h1>Riddle App</h1>
-      </header>
+    <Header action={startOver} user={user} />      
       <main>
         <p><strong>Riddle:</strong> {riddleAnswer.riddle}</p>
         {showAnswer ? (
@@ -46,11 +51,11 @@ function RiddleApp() {
         )}
       </main>
       <footer>
-        <p> we used a riddle api 
+        <p> Uses Riddle API
         </p>
       </footer>
     </>
   );
 }
-
+ 
 export default RiddleApp;
