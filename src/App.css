@@ -1,4 +1,4 @@
-/* Global Styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -31,7 +31,7 @@ footer {
   color: gray;
 }
 
-/* Header styles */
+
 header {
   background-color: white;
   padding: 20px;
@@ -45,7 +45,7 @@ header h1 {
   font-size: 24px;
 }
 
-/* Riddle styles */
+
 strong {
   font-weight: bold;
   font-size: 1.1rem;
@@ -56,7 +56,7 @@ p {
   margin: 10px 0;
 }
 
-/* Button Styles */
+
 button {
   padding: 10px 20px;
   font-size: 1rem;
@@ -75,7 +75,6 @@ button:hover {
   background-color: blue;
 }
 
-/* Additional Styling for different states */
 button:disabled {
   background-color: gray;
   cursor: not-allowed;
@@ -86,7 +85,7 @@ footer p {
   color: gray;
 }
 
-/* Mobile responsiveness */
+
 @media (max-width: 600px) {
   main {
     padding: 15px;
