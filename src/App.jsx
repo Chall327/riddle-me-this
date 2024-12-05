@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import {useAuthentication} from "../authService";
 import Header from "./Header.jsx"
-import './index.css';
+import './App.css';
 
 function RiddleApp() {
   const [riddleAnswer, setRiddleAnswer] = useState(null);
@@ -51,8 +51,7 @@ function RiddleApp() {
         )}
       </main>
       <footer>
-        <p> Uses Riddle API
-        </p>
+        <p> Uses Riddle API</p>
       </footer>
     </>
   );
