@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import {useAuthentication} from "../authService";
-import Header from "./Header.jsx"
+import Header from "./Header.jsx";
 import './App.css';
 
 function RiddleApp() {
   const [riddleAnswer, setRiddleAnswer] = useState(null);
   const [showAnswer, setShowAnswer] = useState(false);
+  const [score, setscore] = useState(0)
   const user = useAuthentication();
 
   const fetchRiddle = async () => {
@@ -33,13 +34,16 @@ function RiddleApp() {
 
   return (
     <>
-    <Header action={startOver} user={user} />      
+    <Header action={startOver} user={user} score={score} />      
       <main>
         <p><strong>Riddle:</strong> {riddleAnswer.riddle}</p>
         {showAnswer ? (
           <>
             <p><strong>Answer:</strong> {riddleAnswer.answer}</p>
-            <button onClick={() => fetchRiddle()} style={{ margin: "10px" }}>
+            <button onClick={() => {
+              fetchRiddle()
+              setscore(score + 1)
+              }} style={{ margin: "10px" }}>
               Right
             </button>
             <button onClick={() => fetchRiddle()} style={{ margin: "10px" }}>
