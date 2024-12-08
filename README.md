@@ -1,8 +1,9 @@
-# React + Vite
+# riddle me this
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+this is a web app that people can sign in, and track their riddles. There is a riddle on the front page of the website with the answer hidden. Once you think you know the answer, you click the button, and it reveals the answer. 
 
-Currently, two official plugins are available:
+If you got it right, you click the button that says right, and it gives you a point. If you got it wrong, you click the wrong button, and it does not give you a point. Once you press one of the buttons, it resets, and a new riddle appears
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A riddle API was used to generate the riddle and the answer. A firestore data base is used to keep treack of points
+
+Website link
