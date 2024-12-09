@@ -6,4 +6,5 @@ If you got it right, you click the button that says right, and it gives you a po
 
 A riddle API was used to generate the riddle and the answer. A firestore data base is used to keep treack of points
 
-Website link
+Website link: https://riddle-me-this-3f030.web.app
+
