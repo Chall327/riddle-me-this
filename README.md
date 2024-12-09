@@ -8,3 +8,5 @@ A riddle API was used to generate the riddle and the answer. A firestore data ba
 
 Website link: https://riddle-me-this-3f030.web.app
 
+
+firebase hosting link: https://console.firebase.google.com/u/0/project/riddle-me-this-3f030/overview
