@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import {useAuthentication} from "../authService";
 import Header from "./Header.jsx";
 import './App.css';
+import { getScore, saveScore } from "../scoreService.js";
 
 function RiddleApp() {
   const [riddleAnswer, setRiddleAnswer] = useState(null);
@@ -24,9 +25,19 @@ function RiddleApp() {
 
   }
 
+  async function incrementScore() {
+    const currentScore = await getScore(user.uid)
+    const newScore = currentScore + 1
+    setscore(newScore)
+    await saveScore(newScore, user.uid)
+  }
+
   useEffect(() => {
     fetchRiddle();
-  }, []);
+    if (user) {
+      getScore(user.uid).then(setscore)
+    }
+  }, [user]);
 
   if (!riddleAnswer) {
     return <p>Loading...</p>;
@@ -42,7 +53,7 @@ function RiddleApp() {
             <p><strong>Answer:</strong> {riddleAnswer.answer}</p>
             <button onClick={() => {
               fetchRiddle()
-              setscore(score + 1)
+              incrementScore()
               }} style={{ margin: "10px" }}>
               Right
             </button>
