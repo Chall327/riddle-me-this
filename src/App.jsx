@@ -66,7 +66,7 @@ function RiddleApp() {
         )}
       </main>
       <footer>
-        <p> Uses Riddle API</p>
+        <a href="https://riddles-api.vercel.app/random/">Riddle API</a>
       </footer>
     </>
   );

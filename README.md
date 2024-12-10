@@ -1,12 +1,13 @@
-# riddle me this
+# Riddle Me This!
 
-this is a web app that people can sign in, and track their riddles. There is a riddle on the front page of the website with the answer hidden. Once you think you know the answer, you click the button, and it reveals the answer. 
+Riddle Me This! is a fun web application that allows users to practice their ability to solve riddles. There is a riddle on the front page with the answer hidden by default. Once you think you know the answer, you click the "Reveal Answer" button. 
 
-If you got it right, you click the button that says right, and it gives you a point. If you got it wrong, you click the wrong button, and it does not give you a point. Once you press one of the buttons, it resets, and a new riddle appears
+If you answered the riddle correctly, you click the "Right" button, and the app rewards you a point. If you got it wrong, you click the "Wrong" button, and the app does not give you a point. Regardless of which button you choose, the app will then bestow you a new riddle. 
 
-A riddle API was used to generate the riddle and the answer. A firestore data base is used to keep treack of points
+Of course, the exact wording of the answer given may not entirely match your exact thought process, which is why it's important to given the choice to the player to decide whether they got the right or wrong answer, instead of having to type in an answer. 
+
+The API used to create this project can be found in a dedicated hyperlink within the app. We have a Firestore database that keeps track of these points.
 
 Website link: https://riddle-me-this-3f030.web.app
 
-
-firebase hosting link: https://console.firebase.google.com/u/0/project/riddle-me-this-3f030/overview
+Firebase link: https://console.firebase.google.com/u/0/project/riddle-me-this-3f030/overview
