@@ -4,7 +4,7 @@ Riddle Me This! is a fun web application that allows users to practice their abi
 
 If you answered the riddle correctly, you click the "Right" button, and the app rewards you a point. If you got it wrong, you click the "Wrong" button, and the app does not give you a point. Regardless of which button you choose, the app will then bestow you a new riddle. 
 
-Of course, the exact wording of the answer given may not entirely match your exact thought process, which is why it's important to given the choice to the player to decide whether they got the right or wrong answer, instead of having to type in an answer. 
+Of course, the exact wording of the answer given may not entirely match your exact thought process, which is why it's important to give the choice to the player to decide whether they got the right or wrong answer, instead of having to type in an answer. 
 
 The API used to create this project can be found in a dedicated hyperlink within the app. We have a Firestore database that keeps track of these points.
 
